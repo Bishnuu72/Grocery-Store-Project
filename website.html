@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./css/style.css">
+</head>
+<body>
+<div id="container">
+        <a href="./website.html">
+    <div class="logo">
+        <img src="./images/organic-mandu.png" alt="logo">
+    </div>
+    </a>
+    <div class="navbar">
+        <a href="./website.html">Home</a>
+        <a href="./pages/product.html">Product</a>
+        <a href="./pages/blog.html">Blog</a>
+        <a href="./pages/research.html">Research</a>
+        <a href="./pages/about-us.html">About Us</a>
+        <a href="./pages/portfolio.html">Portfolio</a>
+    </div>
+</div>
+<div id="home-page-container">
+    <div class="content">
+<header>
+    <h1>Fresh Food, Great Taste</h1>
+    <p>At Organic Mandu, we believe that food should not only nourish the body
+        but also delight the senses. That's why we are dedicated to providing you
+        with the freshest, most natural, and highest-quality food products, right at
+        your doorstep.
+    </p>
+    <h1>Farm to Table, Nepali Sourced</h1>
+    <p>We take pride in our strong ties with local Nepali farmers and producers. 
+        Through sustainable and ethical practices, we source our ingredients directly
+         from farms across Nepal. By cutting out the middlemen, we ensure that you 
+        receive food that is not only fresh but also supports local communities and economies.
+    </p>
+    <h1>Quality You Can Trust</h1>
+    <p>We understand the importance of quality when it comes to food. 
+        That's why we adhere to strict quality standards at every step of
+         the process, from sourcing to delivery.
+    </p>
+</header>
+    </div>
+    <div class="slideshow">
+        <div class="slideshowFade">
+            <img src="./images/dynamic-1.1.png" alt="image one">
+        </div>
+        <div class="slideshowFade">
+            <img src="./images/dynamic-2.2.png" alt="image two">
+        </div>
+        <div class="slideshowFade">
+            <img src="./images/dynamic-3.3.png" alt="image three">
+        </div>
+        <div class="slideshowFade">
+            <img src="./images/dynamic-4.4.png" alt="image four">
+        </div>
+        <div class="slideshowFade">
+            <img src="./images/dynamic-5.5.png" alt="image five">
+        </div>
+     </div>
+</div>
+<!--javascript for making the slideshow automatic-->
+<script>
+    let slideNumber=0;
+    showSlides();
+
+    function showSlides()
+    {
+        let slides=document.getElementsByClassName("slideshowFade");
+        for (let i=0; i < slides.length; i++)
+        {
+            slides[i].style.display="none";
+        }
+        slideNumber++;
+            if(slideNumber > slides.length) {slideNumber=1}
+            slides[slideNumber -1].style.display="block";
+            setTimeout(showSlides,2000);
+    }
+</script>
+</body>
+</html>

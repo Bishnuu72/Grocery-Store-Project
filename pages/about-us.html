@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+    <!--adding the nav bar to every page-->
+    <div id="container">
+        <a href="../website.html">
+    <div class="logo">
+        <img src="../images/organic-mandu.png" alt="logo">
+    </div>
+    </a>
+    <div class="navbar">
+        <a href="../website.html">Home</a>
+        <a href="./product.html">Product</a>
+        <a href="./blog.html">Blog</a>
+        <a href="./research.html">Research</a>
+        <a href="./about-us.html">About Us</a>
+        <a href="./portfolio.html">Portfolio</a>
+    </div>
+    </div>
+    <!--starting about-us page-->
+    <header>
+        <h1>
+            Welcome to Organic Mandu's suggestion page!
+        </h1>
+        <p>
+            At Organic Mandu, we're committed to providing you 
+            with the freshest and most organic food sourced directly 
+            from Nepali farmers.
+            Your feedback is incredibly valuable to us as we strive to
+            continuously improve our offerings and services.
+            We invite you to share your thoughts, ideas, and suggestions
+            with us through the form below.
+            Your input helps us better understand your needs and
+            preferences, ensuring that we can tailor our products
+            and experiences to meet them. 
+            Thank you for being a part of our journey towards a 
+            healthier and more sustainable future!
+        </p>
+    </header>
+    <div id="form-container">
+        <form onsubmit="return validateForm()"> 
+        <div class="fname">First Name
+            <span class="mandatory">*</span>
+            <input type="text" name="firstname" id="firstname">
+        </div>
+        <div class="lname">Last Name
+            <span class="mandatory">*</span>
+            <input type="text" name="lastname" id="lastname">
+        </div>
+        <div class="gender">Gender 
+            <input type="radio" name="gender" id="gender">Male
+            <input type="radio" name="gender" id="gender">Female
+            <input type="radio" name="gender" id="gender">Other
+        </div>
+        <div class="suggestions">
+            <label for="suggestion">Suggestion
+                <span class="mandatory">*</span>
+            </label> 
+            <textarea name="suggestion" id="suggestion" cols="30" rows="10"></textarea>
+            <input type="submit" class="submit-button" value="Submit">
+        </div>
+        </form>
+    </div>
+    <!--javascript for form validation-->
+    <script>
+        function validateForm()
+        {
+            let firstname =document.getElementById('firstname').value;
+            let lastname =document.getElementById('lastname').value;
+            let suggestion =document.getElementById('suggestion').value;
+            if (firstname === '' || lastname === '' || suggestion === '')
+            {
+                alert('Please fill out all the fields.');
+                return false;
+            }
+            return true;
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,335 @@
+*
+{
+    background-color: beige;
+}
+#container
+{
+    display: flex;
+    padding: 10px;
+    justify-content: space-between;
+    align-items: center;
+}
+.logo img
+{
+  width: 80px;
+}
+.navbar a
+{
+    margin-right: 10px;
+    text-decoration: none;
+    position: relative;
+}
+.navbar a:hover
+{
+    color: orange;
+    text-decoration: underline;
+    transition-duration: 0.5s;
+}
+.header p
+{
+    padding-top: 0;
+}
+#home-page-container
+{
+    display: flex;
+    max-width: 1000px;
+    margin: auto;
+}
+.content
+{
+    flex: 1;
+    padding: 20px;
+}
+.slideshow
+{
+    flex: 1;
+    position: relative;
+    max-width: 1000px;
+    height: 400px;
+    margin-left: 20px;
+    overflow: hidden;
+}
+.slide
+{
+    display: none;
+}
+.fade
+{
+    animation: fade 1.5s;
+}
+@keyframes fade
+{
+    from{opacity: 0.5;}
+    to{opacity: 1;}
+}
+.slideshowFade
+{
+    width: 100%;
+    height: 100%;
+    display: none;
+}
+.slideshowFade img
+{
+    width: auto;
+    height: 100%;
+    object-fit: cover;
+}
+/*Product Page*/
+
+#product-container 
+{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: space-around; 
+    padding: 20px;
+}
+
+.product-box 
+{
+    width: calc(33.33% - 20px); /*width for three products per row */
+    margin-bottom: 20px; 
+}
+
+.product-box img 
+{
+    width: 100%; 
+    height: 200px; 
+    object-fit: cover; 
+    border: 1px solid burlywood;
+    border-radius: 5px;
+}
+
+.product-info 
+{
+    width: 100%; 
+    padding: 10px;
+    box-sizing: border-box; 
+}
+
+.product-name, .product-price, .product-discount 
+{
+    margin-bottom: 5px;
+}
+
+.product-name
+{
+    font-weight: bold;
+}
+
+.product-price 
+{
+    color: green;
+}
+
+.original-price 
+{
+    text-decoration: line-through; /* Strike through original price */
+    color: red; /* Change color of original price */
+}
+
+.product-discount 
+{
+    color: green;
+    font-weight: bold;
+}
+
+/*Blog page*/
+
+.blog
+{
+    max-width: 800px;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: transparent;
+    border-radius: 5px;
+    box-shadow: 0 0 10px black;
+}
+.blog h1
+{
+    color: black;
+    margin-bottom: 15px;
+}
+.blog h2
+{
+    color: black;
+    margin-bottom: 15px;
+}
+
+.blog p 
+{
+    margin-bottom: 15px;
+    line-height: 1.8;
+    font-family: 'Times New Roman', Times, serif;
+}
+
+/*Research page*/
+
+.research img
+{
+    width: 100%;
+}
+
+/*about-us page*/
+
+.header h1
+{
+    font-size: large;
+    margin-bottom: 20px;
+}
+.header p
+{
+    font-size: smaller;
+    line-height: 1.5;
+}
+#form-container
+{
+    text-decoration: none;
+    text-align: left;
+}
+.suggestions 
+{
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 20px; 
+}
+
+.suggestions label 
+{
+    margin-bottom: 5px; /* Add spacing between the label and the textarea */
+}
+
+.suggestions textarea 
+{
+    width: 100%;
+    height: 150px;
+    resize: vertical;
+}
+
+.mandatory
+{
+    color: red;
+    margin-left: 5px; /*spacing between text and asterisk*/
+}
+
+.submit-button
+{
+    text-decoration: none;
+    text-align: center;
+    border-radius: 5px;
+    width: 50px; 
+}
+
+/* CSS for the portfolio page */
+
+.portfolioContainer
+{
+    width: 100%;
+    border-radius: 16px;
+    padding: 20px;
+    box-shadow: 10px 10px 15px black;
+}
+
+.portfolioContainer h2 
+{
+    text-align: center;
+}
+
+.portfolioContainer hr 
+{
+    width: 100px;
+    margin: 10px auto;
+}
+
+.members 
+{
+    display: flex;
+    justify-content: center; 
+    gap: 20px; 
+    white-space: nowrap; /* Prevent line breaks within the container */
+}
+
+.teamMembers 
+{
+    text-align: center;
+    padding: 10px; 
+    border-radius: 16px; 
+    position: relative; 
+    transition: transform 0.3s, box-shadow 0.3s; 
+    width: 200px; 
+    display: inline-block; 
+    height: 400px; 
+}
+
+.teamMembers:hover 
+{
+    transform: scale(1.1); /* Increase scale on hover */
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.5); /* Add shadow on hover */
+}
+
+.teamMembers img 
+{
+    width: 100px; 
+    height: 100px;
+    border-radius: 50%;
+    margin: 10px;
+    object-fit: cover;
+    transition: transform 0.3s ; 
+}
+
+.teamMembers:hover img 
+{
+    transform: scale(1.1); /* Increase scale on hover */
+}
+
+.hoverContent 
+{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: transparent;
+    border-radius: 16px;
+    padding: 20px;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.teamMembers:hover .hoverContent 
+{
+    opacity: 1;
+}
+
+.intro 
+{
+    margin-bottom: 10px;
+    max-width: 100%;
+    overflow: hidden; 
+    white-space: normal; /* Allow text to wrap */
+    word-wrap: break-word; /* Break long words and wrap */
+    line-height: 1; 
+}
+
+.socialIcons 
+{
+    display: flex;
+    background-color: transparent; 
+}
+
+.socialIcon 
+{
+    margin: 0 5px;
+}
+
+.socialIcon img 
+{
+    width: 30px; 
+    height: 30px; 
+}
+
